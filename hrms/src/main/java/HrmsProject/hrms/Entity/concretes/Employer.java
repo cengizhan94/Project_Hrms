@@ -3,30 +3,31 @@ package HrmsProject.hrms.Entity.concretes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
 
-@Entity
-@Table(name="job_titles")
 @Data
-public class jobTitles {
+@Entity
+@Table(name="employer")
+public class Employer {
+	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 	
-	@Column(name="job_title")
-	private String jobTitle;
+	@Column(name="company-name")
+	private String companyName;
 	
-	public jobTitles() {}
+	public Employer() {}
 
-	public jobTitles(int id, String jobTitle) {
+	public Employer(int id, String companyName) {
 		super();
 		this.id = id;
-		this.jobTitle = jobTitle;
+		this.companyName = companyName;
 	}
-	
 
 }

@@ -22,6 +22,6 @@ public class HrmsApplication {
                 .apis(RequestHandlerSelectors.basePackage("HrmsProject.hrms"))
                 .build();
 
-    }
+    }  
 
 }
